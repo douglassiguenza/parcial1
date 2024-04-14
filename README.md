@@ -25,3 +25,11 @@
 **Paso 7. Ejecutar el archivo CrudApplicationTests.Java
 
 **Paso 8. Ingresar a localhost:8080/users para verificar la conexión de la aplicación por medio de esta URL.
+
+
+
+Integrantes:
+
+Christopher Alexis Velásquez Aguilar VA22020
+Josué Daniel Rodríguez Yanes RY22001
+Douglas Enrique Sigüenza Quele - SQ22005
