@@ -20,6 +20,11 @@
 
 **Paso 5. Inicia un contenedor de PostgreSQL llamado "basededatos", configurando una contraseña para el usuario "postgres". docker run -d --name basededatos -p 5432:5432 -e POSTGRES_PASSWORD=postgres postgres:latest
 
+Integrantes:
+
+Christopher Alexis Velásquez Aguilar VA22020
+Josué Daniel Rodríguez Yanes RY22001
+Douglas Enrique Sigüenza Quele - SQ22005
 **Paso 6. Modificar el archivo aplication.properties especificamente en la linea spring.datasource.url=jdbc:postgresql://java_db:5432/postgres a spring.datasource.url=jdbc:postgresql://localhost:5432/postgres
 
 **Paso 7. Ejecutar el archivo CrudApplicationTests.Java
