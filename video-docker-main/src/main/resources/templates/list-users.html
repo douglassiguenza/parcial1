@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .footer {
+            padding: 20px;
+            text-align: center;
+        }
+        .team-members {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #006666; /* Color turquesa oscuro */
+            color: white; /* Texto en blanco */
+        }
+        .team-members p {
+            font-weight: bold; /* Texto en negrita */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div>
+        <h1>Lista de usuarios</h1>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            Usuarios
+        </div>
+
+        <div class="card-body">
+            <table class="table table-bordered table-striped">
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Acciones</th>
+                </tr>
+                <tr th:each="user : ${users}">
+                    <td th:text="${user.id}"></td>
+                    <td th:text="${user.name}"></td>
+                    <td>
+                        <a class="btn btn-info" th:href="@{'/editar/'+ ${user.id}}">Editar</a>
+                        <a class="btn btn-danger" th:href="@{'/eliminar/' + ${user.id}}"
+                           onclick="return confirm('Seguro deseas eliminar este registro?')">Elimnar</a>
+
+                    </td>
+                </tr>
+            </table>
+            <a class="btn btn-dark" href="/nuevo">Agregar usuario</a>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="team-members">
+        <h4>Integrantes del equipo:</h4>
+        <p>Josue Daniel Rodriguez Yanes RY22001</p>
+        <p>Christopher Alexis Velásquez Aguilar VA22020</p>
+        <p>Douglas Enrique Siguenza Quele SQ22005</p>
+    </div>
+</div>
+
+</body>
+</html>
